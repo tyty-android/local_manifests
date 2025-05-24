@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!--Remotes-->
+    <remote name="los"          fetch="https://github.com/LineageOS"        revision="lineage-22.2" />
+    <remote name="muppets"      fetch="https://github.com/TheMuppets"       revision="lineage-22.2" />
+    <remote name="tyty"         fetch="https://github.com/tyty-android"     revision="custom" />
+    <remote name="ksu-next"     fetch="https://github.com/KernelSU-Next" />
+
+    <!--Devices Trees-->
+    <project name="android_device_sony_pdx234"            path="device/sony/pdx234"         remote="tyty"/>
+    <project name="android_device_sony_sm8550-common"     path="device/sony/sm8550-common"  remote="tyty"/>
+    <project name="vendor_sony_extra"                     path="vendor/sony/extra"          remote="tyty"/>
+
+    <!--Vendors Tree-->
+    <project name="proprietary_vendor_sony_pdx234"        path="vendor/sony/pdx234"        remote="muppets"/>
+    <project name="proprietary_vendor_sony_sm8550-common" path="vendor/sony/sm8550-common" remote="tyty"/>
+
+    <!--Kernel Tree-->
+    <project name="android_kernel_sony_sm8550"               path="kernel/sony/sm8550"              remote="tyty"/>
+    <project name="KernelSU-Next"                            path="kernel/sony/sm8550/KernelSU"     remote="ksu-next" revision="refs/tags/v1.0.7"/>
+    <project name="android_kernel_sony_sm8550-modules"       path="kernel/sony/sm8550-modules"      remote="los"/>
+    <project name="android_kernel_sony_sm8550-devicetrees"   path="kernel/sony/sm8550-devicetrees"  remote="los"/>
+
+    <!--Hardware dependencies-->
+    <project name="android_hardware_sony"                 path="hardware/sony"             remote="tyty" />
+
+    <!--Misc-->
+    <remove-project name="frameworks_av" />
+    <remove-project name="LineageOS/android_hardware_qcom_audio-ar" groups="qcom,kailua-audio" />
+    <remove-project name="LineageOS/android_vendor_qcom_opensource_arpal-lx" groups="qcom,kailua-audio" />
+    <remove-project name="LineageOS/android_vendor_qcom_opensource_agm" groups="qcom,kailua-audio" />
+    <remove-project name="LineageOS/android_vendor_qcom_opensource_audioreach-graphservices" groups="qcom,kailua-audio" />
+    <remove-project name="vendor_google_overlays_ThemeIcons" />
+
+    <project name="frameworks_av"                                           path="frameworks/av"                                remote="tyty" />
+    <project name="android_hardware_qcom_audio-ar"                          path="hardware/qcom-caf/sm8550/audio/primary-hal"   remote="tyty" />
+    <project name="android_vendor_qcom_opensource_arpal-lx"                 path="hardware/qcom-caf/sm8550/audio/pal"           remote="tyty" />
+    <project name="android_vendor_qcom_opensource_agm"                      path="hardware/qcom-caf/sm8550/audio/agm"           remote="tyty" />
+    <project name="android_vendor_qcom_opensource_audioreach-graphservices" path="hardware/qcom-caf/sm8550/audio/graphservices" remote="tyty" />
+    <project name="vendor_google_overlays_ThemeIcons"                       path="vendor/google/overlays/ThemeIcons"            remote="tyty" />
+</manifest>
