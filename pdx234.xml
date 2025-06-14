@@ -16,10 +16,10 @@
     <project name="proprietary_vendor_sony_sm8550-common" path="vendor/sony/sm8550-common" remote="tyty"/>
 
     <!--Kernel Tree-->
-    <project name="android_kernel_sony_sm8550"               path="kernel/sony/sm8550"              remote="tyty"/>
-    <project name="KernelSU-Next"                            path="kernel/sony/sm8550/KernelSU"     remote="ksu-next" revision="refs/tags/v1.0.7"/>
-    <project name="android_kernel_sony_sm8550-modules"       path="kernel/sony/sm8550-modules"      remote="los"/>
-    <project name="android_kernel_sony_sm8550-devicetrees"   path="kernel/sony/sm8550-devicetrees"  remote="los"/>
+    <project name="android_kernel_sony_sm8550"               path="kernel/sony/sm8550"               remote="tyty"/>
+    <project name="android_kernel_sony_sm8550-modules"       path="kernel/sony/sm8550-modules"       remote="los"/>
+    <project name="android_kernel_sony_sm8550-devicetrees"   path="kernel/sony/sm8550-devicetrees"   remote="los"/>
+    <project name="KernelSU-Next"                            path="kernel/sony/sm8550/KernelSU-Next" remote="ksu-next" revision="next-susfs"/>
 
     <!--Hardware dependencies-->
     <project name="android_hardware_sony"                 path="hardware/sony"             remote="tyty" />
