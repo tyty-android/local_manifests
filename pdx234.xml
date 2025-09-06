@@ -4,7 +4,7 @@
     <remote name="los"          fetch="https://github.com/LineageOS"        revision="lineage-22.2" />
     <remote name="muppets"      fetch="https://github.com/TheMuppets"       revision="lineage-22.2" />
     <remote name="tyty"         fetch="https://github.com/tyty-android"     revision="custom" />
-    <remote name="ksu-next"     fetch="https://github.com/KernelSU-Next" />
+    <remote name="sukisu"       fetch="https://github.com/SukiSU-Ultra" />
 
     <!--Devices Trees-->
     <project name="android_device_sony_pdx234"            path="device/sony/pdx234"         remote="tyty"/>
@@ -19,7 +19,7 @@
     <project name="android_kernel_sony_sm8550"               path="kernel/sony/sm8550"               remote="tyty"/>
     <project name="android_kernel_sony_sm8550-modules"       path="kernel/sony/sm8550-modules"       remote="los"/>
     <project name="android_kernel_sony_sm8550-devicetrees"   path="kernel/sony/sm8550-devicetrees"   remote="los"/>
-    <project name="KernelSU-Next"                            path="kernel/sony/sm8550/KernelSU-Next" remote="ksu-next" revision="next-susfs"/>
+    <project name="SukiSU-Ultra"                             path="kernel/sony/sm8550/KernelSU"      remote="sukisu" revision="susfs-main"/>
 
     <!--Hardware dependencies-->
     <project name="android_hardware_sony"                 path="hardware/sony"             remote="tyty" />
