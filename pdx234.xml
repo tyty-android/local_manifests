@@ -25,17 +25,6 @@
     <project name="android_hardware_sony"                 path="hardware/sony"             remote="tyty" />
 
     <!--Misc-->
-    <remove-project name="frameworks_av" />
-    <remove-project name="LineageOS/android_hardware_qcom_audio-ar" groups="qcom,kailua-audio" />
-    <remove-project name="LineageOS/android_vendor_qcom_opensource_arpal-lx" groups="qcom,kailua-audio" />
-    <remove-project name="LineageOS/android_vendor_qcom_opensource_agm" groups="qcom,kailua-audio" />
-    <remove-project name="LineageOS/android_vendor_qcom_opensource_audioreach-graphservices" groups="qcom,kailua-audio" />
     <remove-project name="vendor_google_overlays_ThemeIcons" />
-
-    <project name="frameworks_av"                                           path="frameworks/av"                                remote="tyty" />
-    <project name="android_hardware_qcom_audio-ar"                          path="hardware/qcom-caf/sm8550/audio/primary-hal"   remote="tyty" />
-    <project name="android_vendor_qcom_opensource_arpal-lx"                 path="hardware/qcom-caf/sm8550/audio/pal"           remote="tyty" />
-    <project name="android_vendor_qcom_opensource_agm"                      path="hardware/qcom-caf/sm8550/audio/agm"           remote="tyty" />
-    <project name="android_vendor_qcom_opensource_audioreach-graphservices" path="hardware/qcom-caf/sm8550/audio/graphservices" remote="tyty" />
     <project name="vendor_google_overlays_ThemeIcons"                       path="vendor/google/overlays/ThemeIcons"            remote="tyty" />
 </manifest>
