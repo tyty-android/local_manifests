@@ -4,7 +4,6 @@
     <remote name="los"          fetch="https://github.com/LineageOS"        revision="lineage-23.2" />
     <remote name="muppets"      fetch="https://github.com/TheMuppets"       revision="lineage-23.2" />
     <remote name="tyty"         fetch="https://github.com/tyty-android"     revision="custom" />
-    <remote name="sukisu"       fetch="https://github.com/SukiSU-Ultra" />
 
     <!--Devices Trees-->
     <project name="android_device_sony_pdx234"            path="device/sony/pdx234"         remote="tyty"/>
@@ -12,43 +11,12 @@
     <project name="vendor_sony_extra"                     path="vendor/sony/extra"          remote="tyty"/>
 
     <!--Vendors Tree-->
-    <project name="proprietary_vendor_sony_pdx234"        path="vendor/sony/pdx234"        remote="tyty"/>
-    <project name="proprietary_vendor_sony_sm8550-common" path="vendor/sony/sm8550-common" remote="tyty"/>
+    <project name="proprietary_vendor_sony_pdx234"        path="vendor/sony/pdx234"         remote="tyty"/>
+    <project name="proprietary_vendor_sony_sm8550-common" path="vendor/sony/sm8550-common"  remote="tyty"/>
 
     <!--Kernel Tree-->
     <project name="android_kernel_sony_sm8550"               path="kernel/sony/sm8550"               remote="tyty"/>
     <project name="android_kernel_sony_sm8550-modules"       path="kernel/sony/sm8550-modules"       remote="los"/>
     <project name="android_kernel_sony_sm8550-devicetrees"   path="kernel/sony/sm8550-devicetrees"   remote="los"/>
-    <project name="SukiSU-Ultra"                             path="kernel/sony/sm8550/KernelSU"      remote="sukisu" revision="4b8644515fe6d87a109129e590ccd9d33a855dca"/>
-
-    <!--Hardware dependencies-->
-    <project name="android_hardware_sony"                 path="hardware/sony"             remote="tyty" />
-
-    <!--Misc-->
-    <remove-project name="frameworks_base" />
-    <remove-project name="frameworks_av" />
-    <remove-project name="hardware_interfaces" />
-    <remove-project name="packages_apps_Settings" />
-    <remove-project name="packages_modules_Bluetooth" />
-    <remove-project name="platform/external/noto-fonts" />
-    <remove-project name="platform/packages/modules/RemoteKeyProvisioning" />
-    <remove-project name="vendor_google_overlays_ThemeIcons" />
-    <remove-project name="LineageOS/android_hardware_qcom_audio-ar" />
-    <remove-project name="LineageOS/android_vendor_qcom_opensource_agm" />
-    <remove-project name="LineageOS/android_vendor_qcom_opensource_arpal-lx" />
-    <remove-project name="LineageOS/android_vendor_qcom_opensource_audio-hal_st-hal-ar" />
-
-    <project name="frameworks_av"                                           path="frameworks/av"                                     remote="tyty" groups="pdk,sysui-studio" />
-    <project name="frameworks_base"                                         path="frameworks/base"                                   remote="tyty" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
-    <project name="packages_apps_Settings"                                  path="packages/apps/Settings"                            remote="tyty" groups="pdk-fs,pdk-cw-tvc,sysui-studio" />
-    <project name="packages_modules_Bluetooth"                              path="packages/modules/Bluetooth"                        remote="tyty" groups="pdk" />
-    <project name="hardware_interfaces"                                     path="hardware/interfaces"                               remote="tyty" groups="pdk,sysui-studio" />
-    <project name="noto-fonts"                                              path="external/noto-fonts"                               remote="tyty" groups="pdk" />
-    <project name="RemoteKeyProvisioning"                                   path="packages/modules/RemoteKeyProvisioning"            remote="tyty" groups="pdk-cw-fs,pdk-fs" />
-    <project name="android_vendor_qcom_opensource_arpal-lx"                 path="hardware/qcom-caf/sm8550/audio/pal"                remote="tyty" groups="qcom,kailua-audio" />
-    <project name="android_vendor_qcom_opensource_audio-hal_st-hal-ar"      path="vendor/qcom/opensource/audio-hal/st-hal-ar-legacy" remote="tyty" groups="qcom,lanai-audio" />
-    <project name="vendor_google_overlays_ThemeIcons"                       path="vendor/google/overlays/ThemeIcons"                 remote="tyty" />
-
-    <project path="hardware/qcom-caf/sm8550/audio/primary-hal" name="LineageOS/android_hardware_qcom_audio-ar" groups="qcom,kailua-audio" revision="lineage-23.2-caf-sm8550" />
-    <project path="hardware/qcom-caf/sm8550/audio/agm" name="LineageOS/android_vendor_qcom_opensource_agm" groups="qcom,kailua-audio" revision="lineage-23.2-caf-sm8550" />
+    <project name="SukiSU-Ultra"                             path="kernel/sony/sm8550/KernelSU"      remote="tyty"/>
 </manifest>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!--Remotes-->
+    <remote name="tyty"         fetch="https://github.com/tyty-android"         revision="custom" />
+    <remote name="evod"         fetch="https://github.com/Evolution-X-Devices"  revision="bka" />
+
+    <!--AOSP-->
+    <remove-project name="frameworks_base" />
+    <remove-project name="frameworks_av" />
+    <remove-project name="packages_apps_Settings" />
+    <remove-project name="packages_modules_Bluetooth" />
+    <remove-project name="platform/external/noto-fonts" />
+    <remove-project name="platform/packages/modules/RemoteKeyProvisioning" />
+    <remove-project name="system_core" />
+    <remove-project name="vendor_google_overlays_ThemeIcons" />
+
+    <project name="frameworks_av"                                           path="frameworks/av"                                     remote="tyty" groups="pdk,sysui-studio" />
+    <project name="frameworks_base"                                         path="frameworks/base"                                   remote="tyty" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+    <project name="packages_apps_Settings"                                  path="packages/apps/Settings"                            remote="tyty" groups="pdk-fs,pdk-cw-tvc,sysui-studio" />
+    <project name="packages_modules_Bluetooth"                              path="packages/modules/Bluetooth"                        remote="tyty" groups="pdk" />
+    <project name="noto-fonts"                                              path="external/noto-fonts"                               remote="tyty" groups="pdk" />
+    <project name="RemoteKeyProvisioning"                                   path="packages/modules/RemoteKeyProvisioning"            remote="tyty" groups="pdk-cw-fs,pdk-fs" />
+    <project name="system_core"                                             path="system/core"                                       remote="tyty" groups="pdk" />
+    <project name="vendor_google_overlays_ThemeIcons"                       path="vendor/google/overlays/ThemeIcons"                 remote="tyty" />
+
+    <!--QCOM-->
+    <remove-project name="LineageOS/android_hardware_qcom_audio-ar" />
+    <remove-project name="LineageOS/android_vendor_qcom_opensource_agm" />
+    <remove-project name="LineageOS/android_vendor_qcom_opensource_arpal-lx" />
+    <remove-project name="LineageOS/android_vendor_qcom_opensource_audio-hal_st-hal-ar" />
+
+    <project name="android_vendor_qcom_opensource_arpal-lx"                 path="hardware/qcom-caf/sm8550/audio/pal"                remote="tyty" groups="qcom,kailua-audio" />
+    <project name="android_vendor_qcom_opensource_audio-hal_st-hal-ar"      path="vendor/qcom/opensource/audio-hal/st-hal-ar-legacy" remote="tyty" groups="qcom,lanai-audio" />
+
+    <project path="hardware/qcom-caf/sm8550/audio/primary-hal" name="LineageOS/android_hardware_qcom_audio-ar" groups="qcom,kailua-audio" revision="lineage-23.2-caf-sm8550" />
+    <project path="hardware/qcom-caf/sm8550/audio/agm" name="LineageOS/android_vendor_qcom_opensource_agm" groups="qcom,kailua-audio" revision="lineage-23.2-caf-sm8550" />
+
+    <!--Sony-->
+    <project name="android_hardware_sony" path="hardware/sony"   remote="tyty" />
+</manifest>
